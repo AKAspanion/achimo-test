@@ -1,10 +1,15 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import App from "./App";
 
-test("renders learn react link", () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/No/i);
+describe("renders app", () => {
+  it("should render app", () => {
+    const { getByTestId } = render(<App />);
 
-  expect(linkElement).toBeInTheDocument();
+    const input = getByTestId(/search-field/i);
+
+    expect(input).toBeInTheDocument();
+
+    fireEvent.change(input, { target: { value: "a" } });
+  });
 });

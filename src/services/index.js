@@ -1,1 +1,1 @@
-export * from "./fetchGithubUser";
+export * from "./fetch-github-user/fetchGithubUser";

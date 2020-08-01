@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState, useRef } from "react";
 
-import { fetchGithubUser } from "../services";
+import { fetchGithubUser } from "../../services";
 
 export default function useGithubUserFetch(name) {
   const [loading, setLoading] = useState(true);

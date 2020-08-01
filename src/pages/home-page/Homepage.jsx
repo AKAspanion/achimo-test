@@ -5,8 +5,8 @@ import {
   SearchField,
   UserDetails,
   LoadingState,
-} from "../components/";
-import { useDebounce, useGithubUserFetch } from "../hooks/";
+} from "../../components/";
+import { useDebounce, useGithubUserFetch } from "../../hooks/";
 
 export default function () {
   const [name, setName] = useState("");

@@ -1,4 +1,4 @@
-export { default as EmptyState } from "./EmptyState";
-export { default as SearchField } from "./SearchField";
-export { default as UserDetails } from "./UserDetails";
-export { default as LoadingState } from "./LoadingState";
+export { default as EmptyState } from "./empty-state/EmptyState";
+export { default as SearchField } from "./search-field/SearchField";
+export { default as UserDetails } from "./user-details/UserDetails";
+export { default as LoadingState } from "./loading-state/LoadingState";
