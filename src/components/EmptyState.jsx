@@ -5,6 +5,12 @@ export default function ({ mount, search, message }) {
     return mount || !search;
   }
 
+  function parsedMessage() {
+    return message === "Not Found"
+      ? "When you are ready, go ahead and search for a user"
+      : message;
+  }
+
   return (
     <div className="empty-container">
       <div className="empty__content">
@@ -13,9 +19,7 @@ export default function ({ mount, search, message }) {
         </div>
         <div className="empty__title">No user found</div>
         <div className="empty__message">
-          {showSearch()
-            ? "When you are ready, go ahead and search for a user"
-            : message}
+          {showSearch() ? parsedMessage() : message}
         </div>
       </div>
     </div>
