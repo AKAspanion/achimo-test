@@ -5,8 +5,12 @@ export default function ({ mount, search, message }) {
     return mount || !search;
   }
 
+  function imageType() {
+    return showSearch() ? "search" : "error";
+  }
+
   function parsedMessage() {
-    return message === "Not Found"
+    return !message || message === "Not Found"
       ? "When you are ready, go ahead and search for a user"
       : message;
   }
@@ -15,7 +19,7 @@ export default function ({ mount, search, message }) {
     <div className="empty-container">
       <div className="empty__content">
         <div className="empty__img">
-          <img src={`images/${showSearch() ? "search" : "error"}.svg`} />
+          <img alt={imageType()} src={`images/${imageType()}.svg`} />
         </div>
         <div className="empty__title">No user found</div>
         <div className="empty__message">

@@ -1,18 +1,10 @@
 import React from "react";
 
 export default function ({
-  user: {
-    name,
-    blog,
-    login,
-    email,
-    avatar_url,
-    followers,
-    following,
-  },
+  user: { name, blog, login, email, avatar_url, followers, following } = {},
 }) {
   return (
-    <div className="user-container">
+    <div data-testid="user" className="user-container">
       <div className="user__avatar">
         <img alt={name} src={avatar_url} />
       </div>
@@ -34,7 +26,11 @@ export default function ({
           )}
         </div>
       ) : null}
-      {blog && <a className="user__blog" href={blog}>{blog}</a>}
+      {blog && (
+        <a className="user__blog" href={blog}>
+          {blog}
+        </a>
+      )}
     </div>
   );
 }
