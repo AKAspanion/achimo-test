@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-import "./App.css";
+import React from "react";
 
-import { useGithubUserFetch } from "./hooks/";
+import { Homepage } from "./pages/";
 
 function App() {
-  const [name, setName] = useState("AKAspanion");
-  const [userData, error, loading] = useGithubUserFetch(name);
-  console.log(userData, error, loading);
-  return <div className="App">App</div>;
+  return <Homepage />;
 }
 
 export default App;
